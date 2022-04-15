@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  border-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(100deg, #FFE691 0%, #FFF7E6);
+  font-family: 'Patrick Hand', cursive;
+}
+
+#container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-beetween;
+  margin: 20px;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+#container .lista-de-categorias {
+  
+  font-size: 20px;
+  padding-right: 30px;
+}
+
+.lista-de-categorias h2 {
+  text-align: center;
+}
+
+.resultado-lista {
+  min-width: 50%;
+}
+
+.descricao-desafio {
+  width: 60%;
+  font-size: 12px;
+  font-style: italic;
+  color: #333;
+  text-align: justify;
+  line-height: 16px;
+  border: 1px solid #999;
+  padding: 10px;
+}
+
+.texto-desafio {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+ul, li {
+  list-style: none;
+}
+
+li {
+  display: inline-block;
+  padding: 5px 10px;
+  min-width: 120px;
+}
+
+li:hover, label:hover {
+  background-color: #FFEEB6;
+  cursor: pointer;
+  color: #B57900;
+  border-radius: 20px;
+}
+
+li:focus-within {
+  background-color: #FFEEB6;
+  cursor: pointer;
+  color: #B57900;
+  border-radius: 20px;
+}
+
+input[type=radio] {
+  margin: 0 5px 0 10px;
+}
+
+input[type=text] {
+  font-family: 'Patrick Hand', cursive;
+  font-size: 20px;
+  border-radius: 20px;
+  padding: 5px 10px 5px 20px;
+  border: none;
+  background-color: #FFF9E3;
+  margin: 15px 5px;
+}
+
+#lista {
+  font-family: 'Pacifico', cursive;
+  font-size: 26px;
+  color: #666;
+  background-color: #FFF;
+  padding: 20px 40px;
+  border-radius: 10px 40px;
+  box-shadow: 5px 5px 1px 1px #00000080;
+}
+
+#lista h3 {
+  color: #000;
+  font-size: 32px;
+  font-weight: normal;
+}
+
+#lista span {
+  color: #000;
+}
+
+button {
+  margin: 15px 5px;
+  padding: 10px 20px;
+  font-family: 'Patrick Hand', cursive;
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #FFF;
+  text-transform: uppercase;
+  border-radius: 20px;
+  border: none;
+  background-color: black;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: orange;
+}
+
+.material-icons {
+  position: relative;
+  top: 2px;
+  left: -2px;
+}
+
+.icon-pequeno {
+  font-size: 16px !important; /* Preferred icon size */
+  color: #FFF !important;
+}
+
+.icon-grande {
+  font-size: 32px !important; /* Preferred icon size */
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 12px;
+}
+
+/* CSS PARA TELAS COM RESOLUÇÃO MÁXIMA DE 840 PIXELS */
+@media screen and (max-width: 840px) {
+  #container {
+  flex-direction: column;
+  }
+  
+  #container .lista-de-categorias, .resultado-lista {
+    width: 90%;
+  }
+}
+
+/* CASO CLIQUE NO BOTÃO IMPRIMIR */
+@media print {
+  body * { /*tudo que estiver no body fica invisível, para não imprimir como html*/
+    visibility: hidden;
+  }
+  #lista, #lista * { /* apenas o que estiver dentro da div com id lista fica visível */
+    visibility: visible;
+  }
+  #lista {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 90%;
+    padding: 20px 40px;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  
+  #lista .botao-imprimir, #lista .icon-pequeno {
+    visibility: hidden;
+  }
+}
+

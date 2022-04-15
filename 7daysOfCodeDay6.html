@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width initial-scale=1.0" />
+    <title>#7 Days Of Code - Lógica Javascript - Day 6</title>
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Pacifico&family=Patrick+Hand&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styleDay6.css">
+  </head>
+  <body>
+    <center><br><h1>Vamos às compras?</h1></center><br><br>
+    <div id="container">
+      <div class="lista-de-categorias">
+        
+        <h3>Selecione uma categoria:</h3>
+        <ul>
+          <li><input type="radio" id="fruta" name="categ"><label for="fruta">Frutas</label></li>
+          <li><input type="radio" id="lat" name="categ"><label for="lat">Laticinios</label></li>
+          <li><input type="radio" id="cong" name="categ"><label for="cong">Congelados</label></li>
+          <li><input type="radio" id="doces" name="categ"><label for="doces">Doces</label></li>
+          <li><input type="radio" id="pad" name="categ"><label for="pad">Padaria</label></li>
+          <li><input type="radio" id="hig" name="categ"><label for="hig">Higiene</label></li>
+          <li><input type="radio" id="outros" name="categ"><label for="outros">Outros</label></li>
+        </ul>
+        <br>
+        <div class="produto-e-botao">
+          <h4>Digite o nome do produto a ser adicionado:</h4>
+          <input type="text" id="item"><button onclick="adicionaItens();"><span class="material-icons icon-pequeno">post_add</span>Adicionar</button>
+          <br><br>
+          <div id="remove-item">
+            Quer remover um produto? Digite o nome no campo abaixo:<br><input type="text" id="produtoRemover"> <button onclick="removerItens();"><span class="material-icons icon-pequeno">delete</span>Remover</button>
+          </div>
+        </div>
+      </div>
+      <div class="resultado-lista">
+        <div id="lista">
+          <h3><span class="material-icons icon-grande">receipt_long</span>Sua lista de compras:</h3>
+        </div>
+      </div>
+    </div>
+    <footer>Feito por Dayara Rossi - Abril de 2022</footer>
+    <script src="scriptDay6.js"></script>
+  </body>
+</html>
